@@ -1,0 +1,22 @@
+<mat-dialog-content>
+  <form [formGroup]="formGroup">
+    <mat-form-field appearance="outline" class="full-width-input" color="accent">
+      <mat-label>Código de Área</mat-label>
+      <input matInput type="text" formControlName="codigoArea">
+      <mat-error *ngIf="formGroup.get('codigoArea') &&
+                      formGroup.get('codigoArea')?.invalid &&
+                      formGroup.get('codigoArea')?.touched">
+                    Código de Área é obrigatório.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width-input" color="accent">
+      <mat-label>Número</mat-label>
+      <input matInput type="text" formControlName="numero">
+      <mat-error *ngIf="formGroup.get('numero') &&
+              formGroup.get('numero')?.invalid &&
+              formGroup.get('numero')?.touched">
+            Número é obrigatório.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
